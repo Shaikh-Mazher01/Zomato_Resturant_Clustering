@@ -1,0 +1,283 @@
+{
+  "data": {
+    "restaurants_total": 105,
+    "restaurants_with_reviews": 100,
+    "reviews_raw": 10000,
+    "reviews_clean": 9938
+  },
+  "sentiment": {
+    "n_train": 6945,
+    "n_test": 1737,
+    "majority_baseline_accuracy": 0.7207829591249281,
+    "comparison": [
+      {
+        "model": "Logistic Regression",
+        "stage": "default",
+        "accuracy": 0.9481865284974094,
+        "precision": 0.9817578772802653,
+        "recall": 0.9456869009584664,
+        "f1": 0.9633848657445078,
+        "roc_auc": 0.9877392049010244,
+        "cv_f1_train": 0.9650716737330911
+      },
+      {
+        "model": "Linear SVM (calibrated)",
+        "stage": "default",
+        "accuracy": 0.9556706966033391,
+        "precision": 0.9764801297648013,
+        "recall": 0.9616613418530351,
+        "f1": 0.9690140845070423,
+        "roc_auc": 0.9886927308059682,
+        "cv_f1_train": 0.9688933200398804
+      },
+      {
+        "model": "Complement Naive Bayes",
+        "stage": "default",
+        "accuracy": 0.9447322970639033,
+        "precision": 0.9558359621451105,
+        "recall": 0.9680511182108626,
+        "f1": 0.9619047619047619,
+        "roc_auc": 0.985967194756431,
+        "cv_f1_train": 0.958828731453277
+      },
+      {
+        "model": "Logistic Regression",
+        "stage": "tuned",
+        "accuracy": 0.952216465169833,
+        "precision": 0.9802793755135579,
+        "recall": 0.9528753993610224,
+        "f1": 0.9663831510733091,
+        "roc_auc": 0.9884736998122591,
+        "cv_f1_train": 0.9680167088771947
+      }
+    ],
+    "best_params": {
+      "clf__C": "10",
+      "tfidf__min_df": "1",
+      "tfidf__ngram_range": "(1, 2)"
+    },
+    "confusion_matrix": [
+      [
+        461,
+        24
+      ],
+      [
+        59,
+        1193
+      ]
+    ],
+    "top_negative_words": [
+      "not",
+      "worst",
+      "bad",
+      "pathetic",
+      "no",
+      "poor",
+      "dont",
+      "horrible",
+      "disappointed",
+      "waste",
+      "stale",
+      "ordered",
+      "didnt",
+      "cold",
+      "asked"
+    ],
+    "top_positive_words": [
+      "best",
+      "great",
+      "awesome",
+      "amazing",
+      "try",
+      "nice",
+      "love",
+      "delicious",
+      "loved",
+      "very good",
+      "place",
+      "excellent",
+      "tasty",
+      "perfect",
+      "ambience"
+    ]
+  },
+  "clustering": {
+    "algorithm": "KMeans",
+    "k": 3,
+    "silhouette": 0.22524055784150943,
+    "davies_bouldin": 1.616770072947934,
+    "calinski_harabasz": 26.884415413867128,
+    "bootstrap_stability_ari": 0.7257679437805867,
+    "pca_explained_variance_2d": 0.5192434606353127,
+    "cluster_names": {
+      "0": "Budget \u00b7 Lower-rated \u00b7 Biryani",
+      "1": "Mid-range \u00b7 Well-rated \u00b7 Sushi",
+      "2": "Premium \u00b7 Top-rated \u00b7 Mediterranean"
+    },
+    "signature_cuisines": {
+      "0": [
+        "Biryani",
+        "South Indian"
+      ],
+      "1": [
+        "Sushi",
+        "Cafe"
+      ],
+      "2": [
+        "Mediterranean",
+        "European"
+      ]
+    },
+    "cluster_sizes": {
+      "Budget \u00b7 Lower-rated \u00b7 Biryani": 48,
+      "Mid-range \u00b7 Well-rated \u00b7 Sushi": 37,
+      "Premium \u00b7 Top-rated \u00b7 Mediterranean": 15
+    }
+  },
+  "topics": {
+    "negative": [
+      {
+        "topic": 1,
+        "keywords": [
+          "chicken",
+          "no",
+          "service",
+          "biryani",
+          "dont",
+          "taste",
+          "veg",
+          "rice"
+        ],
+        "share": 0.4882474226804124
+      },
+      {
+        "topic": 2,
+        "keywords": [
+          "not",
+          "taste not",
+          "delivered",
+          "not delivered",
+          "taste",
+          "tasty",
+          "not tasty",
+          "not fresh"
+        ],
+        "share": 0.1995876288659794
+      },
+      {
+        "topic": 3,
+        "keywords": [
+          "worst",
+          "worst experience",
+          "worst taste",
+          "experience",
+          "taste",
+          "worst service",
+          "life",
+          "worst biryani"
+        ],
+        "share": 0.12164948453608247
+      },
+      {
+        "topic": 4,
+        "keywords": [
+          "quantity",
+          "quality",
+          "low",
+          "quantity not",
+          "taste",
+          "price",
+          "quality quantity",
+          "biryani"
+        ],
+        "share": 0.058969072164948455
+      },
+      {
+        "topic": 5,
+        "keywords": [
+          "bad",
+          "quality",
+          "bad experience",
+          "bad quality",
+          "taste",
+          "experience",
+          "delivery",
+          "bad taste"
+        ],
+        "share": 0.13154639175257732
+      }
+    ],
+    "positive": [
+      {
+        "topic": 1,
+        "keywords": [
+          "service",
+          "great",
+          "ambience",
+          "best",
+          "visit",
+          "amazing",
+          "staff",
+          "taste"
+        ],
+        "share": 0.6497683993823984
+      },
+      {
+        "topic": 2,
+        "keywords": [
+          "delivery",
+          "fast",
+          "fast delivery",
+          "quick delivery",
+          "quick",
+          "super",
+          "nice delivery",
+          "awesome delivery"
+        ],
+        "share": 0.06484817292846114
+      },
+      {
+        "topic": 3,
+        "keywords": [
+          "nice",
+          "nice service",
+          "nice ambience",
+          "service nice",
+          "friendly",
+          "ambience nice",
+          "friends",
+          "nice delivery"
+        ],
+        "share": 0.1083376222336593
+      },
+      {
+        "topic": 4,
+        "keywords": [
+          "awesome",
+          "awesome service",
+          "awesome taste",
+          "taste",
+          "guys",
+          "awesome delivery",
+          "service awesome",
+          "awesome awesome"
+        ],
+        "share": 0.10576428203808544
+      },
+      {
+        "topic": 5,
+        "keywords": [
+          "excellent",
+          "excellent service",
+          "service",
+          "service excellent",
+          "thank",
+          "excellent excellent",
+          "excellent delivery",
+          "happy"
+        ],
+        "share": 0.07128152341739578
+      }
+    ]
+  }
+}
