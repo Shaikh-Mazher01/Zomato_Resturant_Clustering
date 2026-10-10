@@ -3,6 +3,8 @@
 Segment 100 Hyderabad restaurants on Zomato by price, cuisine, engagement and customer feedback, and classify
 review sentiment — delivered as an interactive Streamlit dashboard.
 
+🔗 **Live App:** [View Streamlit Application](https://zomatoresturantclustering-byfahad.streamlit.app/)
+
 ## Quick start
 ```bash
 pip install -r requirements.txt
